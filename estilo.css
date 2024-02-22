@@ -49,12 +49,17 @@ ul{
 
 ul>li{
     display: inline-block;
-    margin: 10px;
-
+    margin: 5px;
+}
+ul>li:nth-child(5){
+    border: 2px solid #ffff; 
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
 }
 
 ul>li>a{
     font-size: 1.2em;
+    display: block;
     padding: 10px;
     color: rgb(22, 21, 55);
 
@@ -71,8 +76,7 @@ ul>li>a{
 /*-----principal----*/
 
 #primeiro{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     width: 80vw;
     height: 85vh;
     box-sizing: border-box;
@@ -86,6 +90,7 @@ ul>li>a{
     flex-direction: column;
     margin: 0;
     row-gap: 5px;
+    
 }
 .cadastrar>h2{
     color: white;
@@ -102,6 +107,7 @@ ul>li>a{
     justify-content: center;
     align-items: end;
     width: 100%;
+    
 }
 .imagem-cadastrar>img{
     max-width: 100%;
@@ -143,96 +149,71 @@ form{
 .disponibilidade{
     margin-top: 15px;
     color: white;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 700px){
-    
-
+@media screen and (max-width: 1036px){
+    /*gerais*/
     body{
         width: 100%;
-        margin: 0 auto;
+        
+
     }
+    /*cabeçalho*/
     #header{
+        width: 100%;
+        height: auto;
         flex-direction: column;
-        height: auto;
-        width:  100%;
-        justify-content: center;
-        align-items: center;
-
     }
-    #logo>a>img{
+    #nav, ul{
         width: 100%;
-        align-self: center;
-    }
-
-    #nav{
-        max-width:100%;
-        width: 100%;
-
-    }
-    #nav>ul{
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        max-width: 100%;
-        justify-content: left;
-       border: 1px solid green;
-       padding: 0;
-
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
     }
-    #nav>ul>li{
-        width: 100%;
-        border: 1px solid green;
-        margin: 1px;
-
-    }
-    #nav>ul>li>a{
-        display: block;
-
-    }
-
-    #nav>ul>li>a:hover{
-        font-size: 1.1em;
-        border: 2px solid #ffff; 
-        border-radius: 10px;
-        color: rgb(255, 255, 255);
-    }
-
+    /*main*/
     #primeiro{
-        grid-template-columns: 1rf;
-        height: auto;
         width: 100%;
-        padding: 5px;
-
+        max-width: 100%;
+        flex-direction: column;
     }
     .cadastrar{
         width: 100%;
+        row-gap: 25px;
+        
     }
     .cadastrar>h2{
-        margin-top: 10px;
-        font-size: 3em;
+        margin: 0 auto;
+        max-width: 100%;
+        font-size: 3.3em;
     }
     .cadastrar>p{
-        max-width: 100%;
-        text-align: left;
-        border: 1px solid red;
+        margin: 0 3px;
+        text-align: center;    
     }
     .imagem-cadastrar{
         display: none;
     }
-
+    /*formulário*/
     form{
-        100%
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5px;
     }
+
+    .input-email{
+        border-radius: 20px;
+        box-shadow: 0 0 8px rgb(136, 136, 136);
+        padding-left: 8px;
+    }
+    .button{
+        border-radius: 50px;
+    }
+
 }
+
     
 
